@@ -10,9 +10,7 @@
         d:DataContext="{d:DesignInstance local:ViewModel}"
         mc:Ignorable="d">
     <Grid>
-        <ListBox x:Name="ListBox"
-                 HorizontalContentAlignment="Stretch"
-                 ItemsSource="{Binding Persons}">
+        <ListBox HorizontalContentAlignment="Stretch" ItemsSource="{Binding Persons}">
             <ListBox.ItemTemplate>
                 <DataTemplate DataType="{x:Type local:Person}">
                     <Border Background="Transparent">

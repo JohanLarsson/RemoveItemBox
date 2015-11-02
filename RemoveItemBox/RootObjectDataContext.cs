@@ -21,7 +21,7 @@ namespace RemoveItemBox
             var binding = new Binding
             {
                 Path = DataContextPath,
-                Source = rootObjectProvider.RootObject,
+                Source = rootObjectProvider?.RootObject,
                 Mode = BindingMode.OneWay,
                 UpdateSourceTrigger = UpdateSourceTrigger.PropertyChanged
             };
