@@ -10,14 +10,16 @@
         d:DataContext="{d:DesignInstance local:ViewModel}"
         mc:Ignorable="d">
     <Grid>
-        <ListBox HorizontalContentAlignment="Stretch" ItemsSource="{Binding Persons}">
+        <ListBox x:Name="ListBox"
+                 HorizontalContentAlignment="Stretch"
+                 ItemsSource="{Binding Persons}">
             <ListBox.ItemTemplate>
                 <DataTemplate DataType="{x:Type local:Person}">
                     <Border Background="Transparent">
                         <TextBlock Text="{Binding Name}" />
 
                         <Border.ContextMenu>
-                            <ContextMenu DataContext="{local:RootObjectDataContextBinding}">
+                            <ContextMenu DataContext="{Binding DataContext, Source={local:RootObject}}">
                                 <MenuItem Command="{Binding AddCommand}" Header="Add" />
                                 <MenuItem Command="{Binding RemoveCommand}"
                                           CommandParameter="{Binding PlacementTarget.DataContext,

@@ -7,11 +7,11 @@ using System.Xaml;
 namespace RemoveItemBox
 {
     [MarkupExtensionReturnType(typeof(BindingExpression))]
-    public class RootObjectDataContextBinding : MarkupExtension
+    public class RootObjectDataContext : MarkupExtension
     {
         private static readonly PropertyPath DataContextPath = new PropertyPath(FrameworkElement.DataContextProperty);
 
-        public RootObjectDataContextBinding()
+        public RootObjectDataContext()
         {
         }
 
